@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, Lora, Cormorant_Garamond } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 // Primary sans — spec Montserrat for body/labels/metadata
@@ -16,14 +17,12 @@ const lora = Lora({
   display: "swap",
 });
 
-// FALLBACK for Le Jour Serif (major headings, 122px / 95.1px / 24.4px)
-// TODO when you download fonts: replace with next/font/local from
-// public/fonts/le-jour-serif/*.woff2 and keep variable --font-le-jour
-const leJourFallback = Cormorant_Garamond({
+// Le Jour Serif — real local font (major headings, 122px / 95.1px / 24.4px)
+const leJour = localFont({
   variable: "--font-le-jour",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  src: "../../public/fonts/le-jour-serif/Le Jour Serif Personal Use Only.otf",
   display: "swap",
+  fallback: ["Georgia", "serif"],
 });
 
 // FALLBACK for Tan Nimbus (About heading 36.4px)
@@ -71,7 +70,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${montserrat.variable} ${lora.variable} ${leJourFallback.variable} ${tanNimbusFallback.variable} h-full antialiased`}
+      className={`${montserrat.variable} ${lora.variable} ${leJour.variable} ${tanNimbusFallback.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-lavender text-black font-montserrat">
         {children}

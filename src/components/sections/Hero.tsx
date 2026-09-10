@@ -1,34 +1,37 @@
+import Image from "next/image";
 import Container from "@/components/layout/Container";
-import ProjectImage from "@/components/ui/ProjectImage";
 import Reveal from "@/components/ui/Reveal";
 
 export default function Hero() {
   return (
-    <section id="top" className="relative w-full bg-lavender/60">
-      <Container className="grid gap-10 py-16 md:grid-cols-12 md:py-24">
-        <div className="md:col-span-5 md:pt-10">
-          <Reveal>
-            <p className="font-montserrat text-[19.2px] leading-snug text-black">
+    <section
+      id="top"
+      className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-lavender"
+    >
+
+      <Image
+        src="/images/hero/hero-middle-edited.jpg"
+        alt="Editorial portrait of Iris Quiambao"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-[50%_20%]"
+      />
+
+      <div aria-hidden className="absolute inset-0 bg-lavender/60" />
+
+      <Container className="relative z-10 py-20 text-center">
+        <Reveal>
+          <div className="relative mx-auto inline-block max-w-5xl">
+            <p className="absolute -top-7 font-montserrat text-[16px] text-black md:-top-8 md:text-[19.2px]">
               Explore my
-              <br />
+            </p>
+            <h1 className="font-hero uppercase text-navy">Portfolio</h1>
+            <p className="absolute -bottom-4 right-1 -translate-y-1.5 font-montserrat text-[16px] text-black md:-bottom-6 md:-translate-y-2.5 md:text-[19.2px]">
               of crafted works.
             </p>
-          </Reveal>
-        </div>
-        <div className="md:col-span-7">
-          <Reveal delay={0.1}>
-            <ProjectImage
-              src="/images/hero/placeholder.svg"
-              alt="Editorial hero portrait placeholder for Iris Quiambao"
-              priority
-            />
-          </Reveal>
-        </div>
-        <div className="md:col-span-12 md:-mt-16">
-          <Reveal delay={0.15}>
-            <h1 className="font-hero text-navy">Portfolio</h1>
-          </Reveal>
-        </div>
+          </div>
+        </Reveal>
       </Container>
     </section>
   );

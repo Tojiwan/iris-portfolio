@@ -5,7 +5,7 @@ import Reveal from "@/components/ui/Reveal";
 
 export default function About() {
   return (
-    <Section id="about" className="bg-lavender">
+    <Section id="about" className="bg-white">
       <Container className="grid gap-10 md:grid-cols-12 md:items-center">
         <div className="md:col-span-7">
           <Reveal>
