@@ -5,42 +5,31 @@ import Reveal from "@/components/ui/Reveal";
 
 export default function Techvance() {
   return (
-    <Section className="bg-white pt-4">
+    <Section className="bg-white">
       <Container>
         <div className="grid gap-8 md:grid-cols-12">
           <div className="md:col-span-7 md:order-1">
-            <div className="grid grid-cols-2 gap-4">
-              <Reveal>
-                <ProjectImage
-                  src="/images/techvance/placeholder.svg"
-                  alt="Techvance logo and business card placeholder"
-                />
-              </Reveal>
-              <Reveal delay={0.06}>
-                <ProjectImage
-                  src="/images/techvance/placeholder.svg"
-                  alt="Techvance website interface placeholder"
-                />
-              </Reveal>
-              <Reveal delay={0.08} className="col-span-2">
-                <ProjectImage
-                  src="/images/techvance/placeholder.svg"
-                  alt="Techvance signage and brand applications placeholder"
-                />
-              </Reveal>
-            </div>
+            <Reveal>
+              <ProjectImage
+                src="/images/techvance/techvance-1.png"
+                alt="Techvance brand board with business cards, signage, logo and website interfaces"
+                className="bg-white"
+              />
+            </Reveal>
           </div>
           <div className="md:order-2 md:col-span-5">
             <Reveal>
-              <h3 className="font-project text-deep-teal">Techvance</h3>
+              <h3 className="font-project text-deep-teal md:text-right">
+                Techvance
+              </h3>
             </Reveal>
             <Reveal delay={0.06}>
-              <p className="mt-3 font-montserrat text-[14.6px] font-semibold text-muted-teal">
+              <p className="mt-3 font-montserrat text-[14.6px] font-medium text-muted-teal md:text-right">
                 Overview
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="mt-4 space-y-4 font-montserrat text-[11.4px] leading-relaxed text-black">
+              <div className="mt-4 space-y-4 font-montserrat text-[11.4px] leading-relaxed text-black text-justify">
                 <p>
                   Techvance is a modern, reliable, and forward-thinking digital
                   solutions company, with a strong focus on innovation,
@@ -62,6 +51,12 @@ export default function Techvance() {
               </div>
             </Reveal>
           </div>
+        </div>
+        <div className="mt-10 flex items-center gap-4">
+          <div aria-hidden="true" className="h-px flex-1 bg-deep-teal/30" />
+          <p className="shrink-0 font-montserrat text-[11px] tracking-wide text-deep-teal md:text-right">
+            Iris Quiambao | Portfolio &lsquo;26
+          </p>
         </div>
       </Container>
     </Section>

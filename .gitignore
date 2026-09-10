@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local docs - do not commit
+Iris Quiambao Portfolio - Build Checklist.md
+Iris Quiambao Portfolio Website Specification.md
+iris-quiambao-portfolio-production-build-guide.md

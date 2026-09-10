@@ -5,7 +5,7 @@ import Reveal from "@/components/ui/Reveal";
 
 export default function BrandIdentity() {
   return (
-    <Section className="bg-white pb-0">
+    <Section className="bg-white pb-0!">
       <Container>
         <Reveal>
           <SectionLabel>2nd Phase</SectionLabel>

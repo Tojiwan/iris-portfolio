@@ -4,6 +4,6 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: [{ userAgent: "*", allow: "/" }],
     sitemap:
-      "https://iris-quiambao-portfolio.vercel.app/sitemap.xml",
+      "https://iris-kaye-quiambao.vercel.app/sitemap.xml",
   };
 }

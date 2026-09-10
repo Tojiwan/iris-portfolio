@@ -42,7 +42,7 @@ export const projects: {
       category: "Brand Identity",
       description:
         "Small handmade crochet business (2023) — lilac/white/purple, cute yet refined.",
-      images: ["/images/knit-knots/placeholder.svg"],
+      images: ["/images/knit-knots/knit-knots-left-img.png"],
       accentColor: "#9290c3",
     },
     {
@@ -50,7 +50,7 @@ export const projects: {
       category: "Brand Identity",
       description:
         "Modern digital solutions company — deep teal/blue, trustworthy and scalable.",
-      images: ["/images/techvance/placeholder.svg"],
+      images: ["/images/techvance/techvance-1.png"],
       accentColor: "#0c4056",
     },
   ],

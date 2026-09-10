@@ -9,14 +9,28 @@ export default function Hero() {
       className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-lavender"
     >
 
-      <Image
-        src="/images/hero/hero-middle-edited.jpg"
-        alt="Editorial portrait of Iris Quiambao"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-[50%_20%]"
-      />
+      <div aria-hidden="true" className="absolute inset-0 md:hidden">
+        <Image
+          src="/images/hero/hero-mobile.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[50%_20%]"
+        />
+      </div>
+      <div aria-hidden="true" className="absolute inset-0 hidden md:block">
+        <Image
+          src="/images/hero/hero-middle-edited.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[50%_20%]"
+        />
+      </div>
+      {/* Screen-reader description of the background portrait */}
+      <span className="sr-only">Editorial portrait of Iris Quiambao</span>
 
       <div aria-hidden className="absolute inset-0 bg-lavender/60" />
 

@@ -50,7 +50,7 @@ export default function Footer() {
       </Container>
       <div className="w-full bg-navy">
         <Container className="py-4">
-          <p className="font-montserrat text-[11.1px] text-white">
+          <p className="font-montserrat text-[11.1px] text-white text-center">
             All rights reserved — Established in 2026
           </p>
         </Container>
