@@ -9,17 +9,17 @@ export default function About() {
       <Container className="grid gap-10 md:grid-cols-12 md:items-center">
         <div className="md:col-span-7">
           <Reveal>
-            <p className="font-lora text-[21px] text-black">Hey, there!</p>
+            <p className="font-lora text-[18px] md:text-[30px] text-black">Hey, there!</p>
           </Reveal>
           <Reveal delay={0.08}>
-            <h2 className="mt-3 font-tan-nimbus text-[36.4px] leading-tight">
+            <h2 className="mt-[4.25] font-tan-nimbus text-[25px] md:text-[40px] leading-tight">
               <span className="text-deep-navy">A little </span>
               <span className="text-muted-purple">walkthrough </span>
               <span className="text-deep-navy">about me</span>
             </h2>
           </Reveal>
           <Reveal delay={0.14}>
-            <div className="mt-6 max-w-xl space-y-4 font-montserrat text-[11px] leading-relaxed text-black">
+            <div className="mt-[4.25] max-w-xl space-y-4 font-montserrat md:text-[14px] leading-relaxed text-black">
               <p>
                 I&apos;m Iris, a 22-year-old designer who brings ideas to life
                 through thoughtful, refined visuals. I focus on creating designs
@@ -39,8 +39,8 @@ export default function About() {
         <div className="md:col-span-5">
           <Reveal delay={0.1}>
             <ProjectImage
-              src="/images/hero/placeholder.svg"
-              alt="Portrait placeholder for Iris Quiambao in About section"
+              src="/images/about/vspsGRAD3-0494.jpg"
+              alt="Iris Quiambao holding a vintage film camera"
             />
           </Reveal>
         </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Lora, Cormorant_Garamond } from "next/font/google";
+import { Montserrat, Lora } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -25,15 +25,12 @@ const leJour = localFont({
   fallback: ["Georgia", "serif"],
 });
 
-// FALLBACK for Tan Nimbus (About heading 36.4px)
-// TODO when you download fonts: replace with next/font/local from
-// public/fonts/tan-nimbus/*.woff2 and keep variable --font-tan-nimbus
-const tanNimbusFallback = Cormorant_Garamond({
+// Tan Nimbus — real local font (About heading 36.4px)
+const tanNimbus = localFont({
   variable: "--font-tan-nimbus",
-  subsets: ["latin"],
-  weight: ["500", "600"],
-  style: ["normal", "italic"],
+  src: "../../public/fonts/tan-nimbus/TAN-NIMBUS.woff2",
   display: "swap",
+  fallback: ["Georgia", "serif"],
 });
 
 export const metadata: Metadata = {
@@ -70,7 +67,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${montserrat.variable} ${lora.variable} ${leJour.variable} ${tanNimbusFallback.variable} h-full antialiased`}
+      className={`${montserrat.variable} ${lora.variable} ${leJour.variable} ${tanNimbus.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-lavender text-black font-montserrat">
         {children}
