@@ -41,7 +41,7 @@ export default function Hero() {
               Explore my
             </p>
             <h1 className="font-hero uppercase text-navy">Portfolio</h1>
-            <p className="absolute -bottom-4 right-1 -translate-y-1 font-montserrat text-[16px] text-black md:-bottom-6 md:-translate-y-2.5 md:text-[19.2px]">
+            <p className="absolute -bottom-4 right-1 -translate-y-1.0 font-montserrat text-[16px] text-black md:-bottom-6 md:-translate-y-2.5 md:text-[19.2px]">
               of crafted works.
             </p>
           </div>
