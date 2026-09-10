@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --lavender: #e9e8ff;
+  --navy: #1b1a55;
+  --muted-purple: #9290c3;
+  --deep-navy: #070f2b;
+  --white: #ffffff;
+  --black: #000000;
+
+  --olive-gold: #8d8400;
+  --green: #1e5923;
+  --accent-purple: #9f84dd;
+
+  --dark-purple: #39375d;
+
+  --deep-teal: #0c4056;
+  --muted-teal: #2d5971;
+
+  --background: var(--lavender);
+  --foreground: var(--black);
+}
+
+@theme inline {
+  --color-lavender: var(--lavender);
+  --color-navy: var(--navy);
+  --color-muted-purple: var(--muted-purple);
+  --color-deep-navy: var(--deep-navy);
+  --color-olive-gold: var(--olive-gold);
+  --color-brand-green: var(--green);
+  --color-accent-purple: var(--accent-purple);
+  --color-dark-purple: var(--dark-purple);
+  --color-deep-teal: var(--deep-teal);
+  --color-muted-teal: var(--muted-teal);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-montserrat: var(--font-montserrat);
+  --font-lora: var(--font-lora);
+  --font-le-jour: var(--font-le-jour);
+  --font-tan-nimbus: var(--font-tan-nimbus);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--navy);
+  color: var(--lavender);
+}
+
+/* Editorial fluid type — spec: Hero 122px, Phases 95.1px, Projects 59.4px */
+.font-hero {
+  font-family: var(--font-le-jour), Georgia, serif;
+  font-size: clamp(4rem, 12vw, 7.625rem); /* 64px -> 122px */
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+.font-phase {
+  font-family: var(--font-le-jour), Georgia, serif;
+  font-size: clamp(3.4375rem, 9vw, 5.94375rem); /* 55px -> 95.1px */
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.font-project {
+  font-family: var(--font-montserrat), Arial, sans-serif;
+  font-size: clamp(1.75rem, 5vw, 3.7125rem); /* 28px -> 59.4px */
+  line-height: 1.05;
+  font-weight: 600;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
