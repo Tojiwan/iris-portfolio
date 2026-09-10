@@ -37,7 +37,7 @@ export default function Hero() {
       <Container className="relative z-10 py-20 text-center">
         <Reveal>
           <div className="relative mx-auto inline-block max-w-5xl">
-            <p className="absolute -top-5 font-montserrat text-[16px] text-black md:-top-8 md:text-[19.2px]">
+            <p className="absolute -top-6 font-montserrat text-[16px] text-black md:-top-8 md:text-[19.2px]">
               Explore my
             </p>
             <h1 className="font-hero uppercase text-navy">Portfolio</h1>
