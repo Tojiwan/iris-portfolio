@@ -19,7 +19,7 @@ export default function Techvance() {
           </div>
           <div className="md:order-2 md:col-span-5">
             <Reveal>
-              <h3 className="font-project text-deep-teal md:text-right">
+              <h3 className="font-project text-deep-teal md:text-right md:mb-15">
                 Techvance
               </h3>
             </Reveal>
@@ -29,7 +29,7 @@ export default function Techvance() {
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="mt-4 space-y-4 font-montserrat text-[11.4px] leading-relaxed text-black text-justify">
+              <div className="mt-2 space-y-4 font-montserrat text-[12px] md:text-[14px] leading-relaxed text-black text-justify">
                 <p>
                   Techvance is a modern, reliable, and forward-thinking digital
                   solutions company, with a strong focus on innovation,

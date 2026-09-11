@@ -19,7 +19,7 @@ export default function About() {
             </h2>
           </Reveal>
           <Reveal delay={0.14}>
-            <div className="mt-[4.25] max-w-xl space-y-4 font-montserrat md:text-[14px] leading-relaxed text-black">
+            <div className="mt-[4.25] max-w-xl space-y-4 font-montserrat text-[12px] md:text-[14px] leading-relaxed text-black text-justify">
               <p>
                 I&apos;m Iris, a 22-year-old designer who brings ideas to life
                 through thoughtful, refined visuals. I focus on creating designs

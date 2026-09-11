@@ -2,8 +2,8 @@ import type { Project } from "@/types/portfolio";
 
 export const contact = {
   email: "iriskayequiambao@gmail.com",
-  facebook: "eyerieskey",
-  instagram: "eyerieskey",
+  facebook: "https://facebook.com/eyeriskey",
+  instagram: "https://instagram.com/eyeriskey",
 };
 
 export const projects: {
@@ -17,7 +17,7 @@ export const projects: {
       description:
         "Metro Angeles Chamber of Commerce and Industry, Inc. — UI contributed during internship/trainee journey.",
       images: ["/images/ui-design/maccii/placeholder.svg"],
-      link: "#", // TODO: you will provide live URL
+      link: "https://maccii.org.ph",
     },
     {
       title: "SUPER-AIRE",
@@ -25,7 +25,7 @@ export const projects: {
       description:
         "Superaire Airconditioning — clean, user-friendly marketing + product interface.",
       images: ["/images/ui-design/superaire/placeholder.svg"],
-      link: "#", // TODO: you will provide live URL
+      link: "https://super-aire.com.ph",
     },
     {
       title: "CHEF VINCE GARCIA",
@@ -33,7 +33,7 @@ export const projects: {
       description:
         "Chef Vince Garcia — restaurant brand website UI.",
       images: ["/images/ui-design/chef-vince/placeholder.svg"],
-      link: "#", // TODO: you will provide live URL
+      link: "https://chefvinceculinarygroup.com",
     },
   ],
   brandIdentity: [

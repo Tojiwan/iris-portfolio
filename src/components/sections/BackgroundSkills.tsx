@@ -1,13 +1,4 @@
-import {
-  Aperture,
-  Brush,
-  Camera,
-  Clapperboard,
-  Film,
-  Layers,
-  Palette,
-  Scissors,
-} from "lucide-react";
+import Image from "next/image";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import Reveal from "@/components/ui/Reveal";
@@ -42,20 +33,19 @@ const experience = [
   },
 ];
 
-// Placeholder tool icons — swap with real brand SVGs later.
-// Keep the `data-tool` key so replacements slot in 1:1.
+// Real tool logos — order matters, keep `data-tool` key for future swaps.
 const photoTools = [
-  { icon: Camera, key: "photo-1" },
-  { icon: Aperture, key: "photo-2" },
-  { icon: Palette, key: "photo-3" },
-  { icon: Layers, key: "photo-4" },
-  { icon: Brush, key: "photo-5" },
+  { src: "/images/Photo-Editing-Skills/figma.png", alt: "Figma logo", key: "photo-figma" },
+  { src: "/images/Photo-Editing-Skills/canva.png", alt: "Canva logo", key: "photo-canva" },
+  { src: "/images/Photo-Editing-Skills/Photoshop.png", alt: "Photoshop logo", key: "photo-photoshop" },
+  { src: "/images/Photo-Editing-Skills/lightroom.png", alt: "Lightroom logo", key: "photo-lightroom" },
+  { src: "/images/Photo-Editing-Skills/wordpress.png", alt: "WordPress logo", key: "photo-wordpress" },
 ];
 
 const videoTools = [
-  { icon: Clapperboard, key: "video-1" },
-  { icon: Film, key: "video-2" },
-  { icon: Scissors, key: "video-3" },
+  { src: "/images/Video-Editing-Skills/capcut.png", alt: "CapCut logo", key: "video-capcut" },
+  { src: "/images/Video-Editing-Skills/adobe-premiere.png", alt: "Premiere Pro logo", key: "video-premiere" },
+  { src: "/images/Video-Editing-Skills/davinci-resolve.png", alt: "DaVinci Resolve logo", key: "video-davinci" },
 ];
 
 const skillsBox = [
@@ -168,33 +158,35 @@ export default function BackgroundSkills() {
             <p className="mt-4 font-montserrat text-[12px] text-navy">
               Photo Editing Tools:
             </p>
-            <div className="mt-3 flex flex-wrap gap-3">
-              {photoTools.map(({ icon: Icon, key }) => (
-                <span
+            <div className="mt-3 flex flex-wrap items-center gap-3">
+              {photoTools.map(({ src, alt, key }) => (
+                <Image
                   key={key}
                   data-tool={key}
-                  title="Replace with real tool icon"
-                  aria-label="Editing tool placeholder"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-navy/40 text-navy"
-                >
-                  <Icon size={16} strokeWidth={1.8} />
-                </span>
+                  src={src}
+                  alt={alt}
+                  title={alt}
+                  width={36}
+                  height={36}
+                  className="h-9 w-9 object-contain"
+                />
               ))}
             </div>
             <p className="mt-5 font-montserrat text-[12px] text-navy">
               Video Editing Tools:
             </p>
-            <div className="mt-3 flex flex-wrap gap-3">
-              {videoTools.map(({ icon: Icon, key }) => (
-                <span
+            <div className="mt-3 flex flex-wrap items-center gap-3">
+              {videoTools.map(({ src, alt, key }) => (
+                <Image
                   key={key}
                   data-tool={key}
-                  title="Replace with real tool icon"
-                  aria-label="Editing tool placeholder"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-navy/40 text-navy"
-                >
-                  <Icon size={16} strokeWidth={1.8} />
-                </span>
+                  src={src}
+                  alt={alt}
+                  title={alt}
+                  width={36}
+                  height={36}
+                  className="h-9 w-9 object-contain"
+                />
               ))}
             </div>
           </Reveal>

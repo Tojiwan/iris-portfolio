@@ -19,7 +19,7 @@ export default function KnitKnots() {
               </h2>
             </Reveal>
             <Reveal>
-              <h3 className="font-project normal-case text-muted-purple">
+              <h3 className="font-project normal-case text-muted-purple -translate-x-0.5 md:-translate-x-1 md:mb-15">
                 Knit Knots
               </h3>
             </Reveal>
@@ -29,7 +29,7 @@ export default function KnitKnots() {
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="mt-4 space-y-4 font-montserrat text-[11.4px] leading-relaxed text-black text-justify">
+              <div className="mt-2 space-y-4 font-montserrat text-[12px] md:text-[14px] leading-relaxed text-black text-justify">
                 <p>
                   Knit Knots is a small handmade crochet business established in
                   2023, built on the belief that handcrafted pieces can be both

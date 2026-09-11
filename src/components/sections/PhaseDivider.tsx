@@ -44,7 +44,7 @@ export default function PhaseDivider({
                 src={bgImageMobile}
                 alt=""
                 fill
-                sizes="100vw"
+                sizes="(max-width: 767px) 100vw, 0px"
                 className="object-cover"
               />
             </div>
@@ -57,7 +57,9 @@ export default function PhaseDivider({
               src={bgImage}
               alt=""
               fill
-              sizes="100vw"
+              sizes={
+                bgImageMobile ? "(min-width: 768px) 100vw, 0px" : "100vw"
+              }
               className="object-cover"
             />
           </div>
