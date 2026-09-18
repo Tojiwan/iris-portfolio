@@ -61,7 +61,7 @@ export default function SuperAire() {
         style={dotStyle}
       />
       <Container className="relative">
-        <h3 className="sr-only">Super-Aire UI design showcase</h3>
+        <h3 className="sr-only">Super-Aire UI design showcaseeee</h3>
         <WorkGallery images={images} variant="super" />
         <Reveal delay={0.1}>
           <div className="mt-8 flex justify-start">
