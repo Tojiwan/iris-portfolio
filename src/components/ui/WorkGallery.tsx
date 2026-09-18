@@ -1,8 +1,14 @@
 "use client";
 
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import Image from "next/image";
-import { motion, useReducedMotion, type PanInfo } from "motion/react";
+import {
+  motion,
+  useMotionValue,
+  animate,
+  useReducedMotion,
+} from "motion/react";
+import type { PanInfo } from "motion/react";
 import Reveal from "@/components/ui/Reveal";
 import Lightbox from "@/components/ui/Lightbox";
 
@@ -71,47 +77,72 @@ function MobileCarousel({ images }: { images: WorkImage[] }) {
   const [current, setCurrent] = useState(0);
   const reduce = useReducedMotion();
   const containerRef = useRef<HTMLDivElement>(null);
-  const dragRef = useRef<HTMLDivElement>(null);
+  const x = useMotionValue(0);
   const total = images.length;
+  const [slideWidth, setSlideWidth] = useState(375);
+  const gap = 16;
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const measure = () => setSlideWidth(el.clientWidth);
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
 
   const goTo = useCallback(
     (index: number) => {
-      setCurrent(Math.max(0, Math.min(index, total - 1)));
+      const next = Math.max(0, Math.min(index, total - 1));
+      setCurrent(next);
+      const target = -(next * (slideWidth + gap));
+      if (!reduce) {
+        animate(x, target, {
+          type: "spring",
+          stiffness: 300,
+          damping: 30,
+        });
+      } else {
+        x.set(target);
+      }
     },
-    [total],
+    [total, reduce, x, slideWidth, gap],
   );
 
   const handleDragEnd = (
     _: MouseEvent | TouchEvent | PointerEvent,
     info: PanInfo,
   ) => {
-    const threshold = 50;
-    if (info.offset.x < -threshold) {
-      goTo(current + 1);
-    } else if (info.offset.x > threshold) {
-      goTo(current - 1);
+    const swipeThreshold = slideWidth * 0.2;
+    const velocityThreshold = 300;
+
+    let next = current;
+    if (info.offset.x < -swipeThreshold || info.velocity.x < -velocityThreshold) {
+      next = current + 1;
+    } else if (info.offset.x > swipeThreshold || info.velocity.x > velocityThreshold) {
+      next = current - 1;
     }
+    goTo(next);
   };
 
   return (
     <div className="md:hidden">
       <div ref={containerRef} className="overflow-hidden">
         <motion.div
-          ref={dragRef}
-          className="flex"
+          className="flex gap-4"
+          style={{ x }}
           drag="x"
-          dragConstraints={containerRef}
+          dragConstraints={{
+            left: -((total - 1) * (slideWidth + gap)),
+            right: 0,
+          }}
           dragElastic={0.15}
+          dragMomentum={false}
           onDragEnd={handleDragEnd}
-          animate={{ x: current * -100 + "%" }}
-          transition={
-            reduce
-              ? { duration: 0 }
-              : { type: "spring", stiffness: 300, damping: 30 }
-          }
         >
           {images.map((img) => (
-            <div key={img.src} className="w-full shrink-0 px-1">
+            <div key={img.src} className="w-full shrink-0">
               <SlideCard image={img} />
             </div>
           ))}
