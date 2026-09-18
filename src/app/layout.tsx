@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat, Lora } from "next/font/google";
 import localFont from "next/font/local";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 // Primary sans — spec Montserrat for body/labels/metadata
@@ -71,6 +72,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-lavender text-black font-montserrat">
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
