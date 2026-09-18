@@ -16,7 +16,12 @@ export const projects: {
       category: "UI Design",
       description:
         "Metro Angeles Chamber of Commerce and Industry, Inc. — UI contributed during internship/trainee journey.",
-      images: ["/images/ui-design/maccii/placeholder.svg"],
+      images: [
+        "/images/MACCII/MACCII-left-1.PNG",
+        "/images/MACCII/MACCII-left-2.PNG",
+        "/images/MACCII/MACCII-right-top.png",
+        "/images/MACCII/MACCII-right-b.png.png",
+      ],
       link: "https://maccii.org.ph",
     },
     {
@@ -24,7 +29,12 @@ export const projects: {
       category: "UI Design",
       description:
         "Superaire Airconditioning — clean, user-friendly marketing + product interface.",
-      images: ["/images/ui-design/superaire/placeholder.svg"],
+      images: [
+        "/images/Super-Aire/super-aire-left-top.png",
+        "/images/Super-Aire/siper-aire-left-bottom.png",
+        "/images/Super-Aire/super-aire-right-1.PNG",
+        "/images/Super-Aire/super-aire-right-2.PNG",
+      ],
       link: "https://super-aire.com.ph",
     },
     {
@@ -32,7 +42,12 @@ export const projects: {
       category: "UI Design",
       description:
         "Chef Vince Garcia — restaurant brand website UI.",
-      images: ["/images/ui-design/chef-vince/placeholder.svg"],
+      images: [
+        "/images/Chef-Vince/chefvince-left.PNG",
+        "/images/Chef-Vince/chefvince-middle-top.png",
+        "/images/Chef-Vince/chefvince-middle-bottom.png",
+        "/images/Chef-Vince/chefvince-right.PNG",
+      ],
       link: "https://chefvinceculinarygroup.com",
     },
   ],

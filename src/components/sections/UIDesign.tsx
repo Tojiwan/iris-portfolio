@@ -1,12 +1,11 @@
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
-import ProjectImage from "@/components/ui/ProjectImage";
 import ProjectLink from "@/components/ui/ProjectLink";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Reveal from "@/components/ui/Reveal";
 import { projects } from "@/data/portfolio";
 
-const accents = ["#8d8400", "#1b1a55", "#1e5923"];
+const accents = ["#1e5923", "#1b1a55", "#8d8400"];
 
 export default function UIDesign() {
   return (
@@ -33,37 +32,6 @@ export default function UIDesign() {
           ))}
         </div>
 
-        {/* Editorial showcase — asymmetric, not uniform cards */}
-        <div className="mt-10 grid gap-6 md:grid-cols-12">
-          <Reveal className="md:col-span-4">
-            <ProjectImage
-              src="/images/ui-design/chef-vince/placeholder.svg"
-              alt="Chef Vince Garcia restaurant website UI mockup placeholder"
-            />
-            <p className="mt-2 font-montserrat text-[11px] text-black/60">
-              Chef Vince Garcia — website UI
-            </p>
-          </Reveal>
-          <Reveal delay={0.08} className="md:col-span-5 md:mt-10">
-            <ProjectImage
-              src="/images/ui-design/superaire/placeholder.svg"
-              alt="Superaire Airconditioning website UI placeholder"
-            />
-            <p className="mt-2 font-montserrat text-[11px] text-black/60">
-              Super-Aire — service website UI
-            </p>
-          </Reveal>
-          <Reveal delay={0.12} className="md:col-span-3">
-            <ProjectImage
-              src="/images/ui-design/maccii/placeholder.svg"
-              alt="MACCII chamber website mobile UI placeholder"
-            />
-            <p className="mt-2 font-montserrat text-[11px] text-black/60">
-              MACCII — chamber website UI
-            </p>
-          </Reveal>
-        </div>
-
         <Reveal delay={0.1}>
           <div className="mx-auto mt-12 max-w-3xl space-y-4 font-montserrat text-[11.8px] leading-relaxed text-black">
             <p>
@@ -82,10 +50,6 @@ export default function UIDesign() {
             </p>
           </div>
         </Reveal>
-
-        <p className="mt-10 font-montserrat text-[11px] tracking-wide text-black">
-          Iris Quiambao | Portfolio &lsquo;26
-        </p>
       </Container>
     </Section>
   );

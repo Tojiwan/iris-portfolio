@@ -5,6 +5,9 @@ import Quote from "@/components/sections/Quote";
 import BackgroundSkills from "@/components/sections/BackgroundSkills";
 import PhaseDivider from "@/components/sections/PhaseDivider";
 import UIDesign from "@/components/sections/UIDesign";
+import Maccii from "@/components/sections/Maccii";
+import SuperAire from "@/components/sections/SuperAire";
+import ChefVince from "@/components/sections/ChefVince";
 import KnitKnots from "@/components/sections/KnitKnots";
 import Techvance from "@/components/sections/Techvance";
 import PostersPatterns from "@/components/sections/PostersPatterns";
@@ -28,6 +31,9 @@ export default function Home() {
           bgImage="/images/ui-design/UI-Design-BG.png"
         />
         <UIDesign />
+        <Maccii />
+        <SuperAire />
+        <ChefVince />
 
         <PhaseDivider
           title="Brand Identity"
