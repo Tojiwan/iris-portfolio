@@ -2,8 +2,11 @@ import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import WorkGallery from "@/components/ui/WorkGallery";
 import ProjectLink from "@/components/ui/ProjectLink";
+import SectionLabel from "@/components/ui/SectionLabel";
 import Reveal from "@/components/ui/Reveal";
 import { projects } from "@/data/portfolio";
+
+const accents = ["#1e5923", "#1b1a55", "#8d8400"];
 
 const dotStyle = {
   backgroundImage:
@@ -60,6 +63,16 @@ export default function Maccii() {
         style={dotStyle}
       />
       <Container className="relative">
+        <div className="flex flex-col items-start md:items-end md:mb-10">
+          <Reveal>
+            <SectionLabel>1st Phase</SectionLabel>
+          </Reveal>
+          <Reveal delay={0.06}>
+            <h2 className="mt-2 font-le-jour text-[24.4px] text-navy">
+              UI Design
+            </h2>
+          </Reveal>
+        </div>
         <h3 className="sr-only">MACCII UI design showcase</h3>
         <WorkGallery images={images} variant="maccii" />
         <Reveal delay={0.1}>
