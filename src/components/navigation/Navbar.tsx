@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
+import RollingTextLink from "@/components/ui/RollingTextLink";
 
 const links = [
   { label: "About", href: "#about" },
@@ -27,12 +28,11 @@ export default function Navbar() {
         <ul className="hidden items-center gap-8 md:flex">
           {links.map((l) => (
             <li key={l.href}>
-              <a
+              <RollingTextLink
                 href={l.href}
+                label={l.label}
                 className="font-montserrat text-[13px] uppercase tracking-[0.14em] text-black transition-colors hover:text-navy"
-              >
-                {l.label}
-              </a>
+              />
             </li>
           ))}
         </ul>
