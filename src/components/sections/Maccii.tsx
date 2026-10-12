@@ -76,7 +76,7 @@ export default function Maccii() {
         <h3 className="sr-only">MACCII UI design showcase</h3>
         <WorkGallery images={images} variant="maccii" />
         <Reveal delay={0.1}>
-          <div className="mt-8 flex justify-start md:justify-end">
+          <div className="mt-8 flex justify-center md:justify-end">
             <ProjectLink
               title="Check 'MACCII' link here."
               href={link}

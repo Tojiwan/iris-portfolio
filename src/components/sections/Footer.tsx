@@ -79,7 +79,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`mailto:${contact.email}`}
-                  className="group flex items-center gap-3 font-montserrat text-[11px] text-dark-purple hover:underline hover:underline-offset-4"
+                  className="group flex items-center gap-3 font-montserrat text-[11px] text-dark-purple"
                 >
                   <span
                     aria-hidden="true"
@@ -95,7 +95,7 @@ export default function Footer() {
                   href={`${contact.instagram}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="group flex items-center gap-3 font-montserrat text-[11px] text-dark-purple hover:underline hover:underline-offset-4"
+                  className="group flex items-center gap-3 font-montserrat text-[11px] text-dark-purple"
                 >
                   <span
                     aria-hidden="true"
@@ -111,7 +111,7 @@ export default function Footer() {
                   href={`${contact.facebook}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="group flex items-center gap-3 font-montserrat text-[11px] text-dark-purple hover:underline hover:underline-offset-4"
+                  className="group flex items-center gap-3 font-montserrat text-[11px] text-dark-purple"
                 >
                   <span
                     aria-hidden="true"

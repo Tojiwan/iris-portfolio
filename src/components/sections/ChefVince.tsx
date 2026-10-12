@@ -72,9 +72,33 @@ export default function ChefVince() {
             />
           </div>
         </Reveal>
-        <p className="mt-10 font-montserrat text-[11px] tracking-wide text-black">
-          Iris Quiambao | Portfolio &lsquo;26
-        </p>
+        <Reveal delay={0.15}>
+          <div className="mx-auto my-10 md:my-[120px] max-w-3xl text-center">
+            <p className="font-montserrat text-[12px] leading-relaxed text-black md:text-[14px]">
+              The UI designs showcased here represent just a portion of the
+              projects I&rsquo;ve worked on throughout my journey as an intern
+              and trainee. I&rsquo;ve had hands-on experience contributing to
+              real-world products and was one of the people behind the UI
+              designs for{" "}
+              <strong className="font-bold">
+                Chef Vince Garcia, Metro Angeles Chamber of Commerce and
+                Industry, Inc. (MACCII), and Superaire Airconditioning
+              </strong>
+              , among others.
+            </p>
+            <p className="mt-4 font-montserrat text-[12px] leading-relaxed text-black md:text-[14px]">
+              Each project reflects my growth as a designer, my ability to
+              adapt to different brand needs, and my focus on creating clean,
+              user-friendly, and visually engaging interfaces.
+            </p>
+          </div>
+        </Reveal>
+          <div className="mt-10 flex items-center gap-4">
+          <p className="shrink-0 font-montserrat text-[11px] tracking-wide text-black">
+            Iris Quiambao | Portfolio &lsquo;26
+          </p>
+          <div aria-hidden="true" className="h-px flex-1 bg-black" />
+        </div>
       </Container>
     </Section>
   );

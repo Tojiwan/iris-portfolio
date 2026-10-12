@@ -29,7 +29,7 @@ export default function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="font-montserrat text-[13px] uppercase tracking-[0.14em] text-black transition-colors hover:text-navy hover:underline hover:underline-offset-4"
+                className="font-montserrat text-[13px] uppercase tracking-[0.14em] text-black transition-colors hover:text-navy"
               >
                 {l.label}
               </a>

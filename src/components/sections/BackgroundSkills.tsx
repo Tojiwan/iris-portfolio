@@ -33,20 +33,55 @@ const experience = [
   },
 ];
 
-// Real tool logos — order matters, keep `data-tool` key for future swaps.
 const photoTools = [
-  { src: "/images/Photo-Editing-Skills/figma.png", alt: "Figma logo", key: "photo-figma" },
-  { src: "/images/Photo-Editing-Skills/canva.png", alt: "Canva logo", key: "photo-canva" },
-  { src: "/images/Photo-Editing-Skills/Photoshop.png", alt: "Photoshop logo", key: "photo-photoshop" },
-  { src: "/images/Photo-Editing-Skills/lightroom.png", alt: "Lightroom logo", key: "photo-lightroom" },
-  { src: "/images/Photo-Editing-Skills/wordpress.png", alt: "WordPress logo", key: "photo-wordpress" },
+  { light: "/images/SVGs/figma-light.svg", dark: "/images/SVGs/figma-dark.svg", alt: "Figma logo", key: "photo-figma" },
+  { light: "/images/SVGs/canva-light.svg", dark: "/images/SVGs/canva-dark.svg", alt: "Canva logo", key: "photo-canva" },
+  { light: "/images/SVGs/photoshop-light.svg", dark: "/images/SVGs/photoshop-dark.svg", alt: "Photoshop logo", key: "photo-photoshop" },
+  { light: "/images/SVGs/lightroom-light.svg", dark: "/images/SVGs/lightroom-dark.svg", alt: "Lightroom logo", key: "photo-lightroom" },
+  { light: "/images/SVGs/wordpress-light.svg", dark: "/images/SVGs/wordpress-dark.svg", alt: "WordPress logo", key: "photo-wordpress" },
 ];
 
 const videoTools = [
-  { src: "/images/Video-Editing-Skills/capcut.png", alt: "CapCut logo", key: "video-capcut" },
-  { src: "/images/Video-Editing-Skills/adobe-premiere.png", alt: "Premiere Pro logo", key: "video-premiere" },
-  { src: "/images/Video-Editing-Skills/davinci-resolve.png", alt: "DaVinci Resolve logo", key: "video-davinci" },
+  { light: "/images/SVGs/capcut-light.svg", dark: "/images/SVGs/capcut-dark.svg", alt: "CapCut logo", key: "video-capcut" },
+  { light: "/images/SVGs/premiere-light.svg", dark: "/images/SVGs/premiere-dark.svg", alt: "Premiere Pro logo", key: "video-premiere" },
+  { light: "/images/SVGs/DaVinci_Resolve-light.svg", dark: "/images/SVGs/DaVinci_Resolve-dark.svg", alt: "DaVinci Resolve logo", key: "video-davinci" },
 ];
+
+function ToolIcon({
+  light,
+  dark,
+  alt,
+  toolKey,
+}: {
+  light: string;
+  dark: string;
+  alt: string;
+  toolKey: string;
+}) {
+  return (
+    <span
+      data-tool={toolKey}
+      title={alt}
+      className="group relative inline-block h-9 w-9"
+    >
+      <Image
+        src={light}
+        alt={alt}
+        fill
+        sizes="36px"
+        className="object-contain transition-opacity duration-200 group-hover:opacity-0"
+      />
+      <Image
+        src={dark}
+        alt=""
+        aria-hidden="true"
+        fill
+        sizes="36px"
+        className="object-contain opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+      />
+    </span>
+  );
+}
 
 const skillsBox = [
   "Graphic Designing",
@@ -159,16 +194,13 @@ export default function BackgroundSkills() {
               Photo Editing Tools:
             </p>
             <div className="mt-3 flex flex-wrap items-center gap-3">
-              {photoTools.map(({ src, alt, key }) => (
-                <Image
+              {photoTools.map(({ light, dark, alt, key }) => (
+                <ToolIcon
                   key={key}
-                  data-tool={key}
-                  src={src}
+                  toolKey={key}
+                  light={light}
+                  dark={dark}
                   alt={alt}
-                  title={alt}
-                  width={36}
-                  height={36}
-                  className="h-9 w-9 object-contain"
                 />
               ))}
             </div>
@@ -176,16 +208,13 @@ export default function BackgroundSkills() {
               Video Editing Tools:
             </p>
             <div className="mt-3 flex flex-wrap items-center gap-3">
-              {videoTools.map(({ src, alt, key }) => (
-                <Image
+              {videoTools.map(({ light, dark, alt, key }) => (
+                <ToolIcon
                   key={key}
-                  data-tool={key}
-                  src={src}
+                  toolKey={key}
+                  light={light}
+                  dark={dark}
                   alt={alt}
-                  title={alt}
-                  width={36}
-                  height={36}
-                  className="h-9 w-9 object-contain"
                 />
               ))}
             </div>

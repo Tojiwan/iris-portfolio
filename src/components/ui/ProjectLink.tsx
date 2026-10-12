@@ -11,7 +11,7 @@ export default function ProjectLink({
     <a
       href={href}
       style={{ color: accent }}
-      className="font-montserrat text-[13px] font-semibold uppercase tracking-[0.14em] underline-offset-4 transition-all duration-300 hover:tracking-[0.2em] hover:underline"
+      className="font-montserrat text-[13px] font-semibold uppercase tracking-[0.14em] transition-all duration-300 hover:tracking-[0.2em]"
     >
       {title}
     </a>

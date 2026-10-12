@@ -64,7 +64,7 @@ export default function SuperAire() {
         <h3 className="sr-only">Super-Aire UI design showcase</h3>
         <WorkGallery images={images} variant="super" />
         <Reveal delay={0.1}>
-          <div className="mt-8 flex justify-start">
+          <div className="mt-8 flex justify-center md:justify-start">
             <ProjectLink
               title="Check 'SUPER-AIRE' link here."
               href={link}
